@@ -2,7 +2,6 @@
 <resources>
     <color name="colorPrimary">#181A25</color>
     <color name="colorPrimaryDark">@color/colorPrimary</color>
-
     <color name="color1">#FFBB86FC</color>
     <color name="color2">#FF6200EE</color>
     <color name="color3">#FF3700B3</color>
