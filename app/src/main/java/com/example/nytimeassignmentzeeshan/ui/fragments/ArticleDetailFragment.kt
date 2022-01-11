@@ -22,8 +22,8 @@ class ArticleDetailFragment @Inject constructor() :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(requireActivity()).get(ArticleDetailViewModel::class.java)
-        if (arguments?.getSerializable(MostPopularArticleListFragment.KEY_ARTICLE) != null) {
-            viewModel.setArticle(arguments?.getSerializable(MostPopularArticleListFragment.KEY_ARTICLE) as Article)
+        if (arguments?.getParcelable<Article>(MostPopularArticleListFragment.KEY_ARTICLE) != null) {
+            viewModel.setArticle(arguments?.getParcelable<Article>(MostPopularArticleListFragment.KEY_ARTICLE) as Article)
         }
         val binding = FragmentArticleDetailBinding.bind(view)
         this.binding = binding.also {

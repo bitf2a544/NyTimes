@@ -61,7 +61,7 @@ class MostPopularArticleListFragment @Inject constructor(private val articleAdap
 
         articleAdapter.setOnItemClickListener {
             val bundle = Bundle()
-            bundle.putSerializable(KEY_ARTICLE, it)
+            bundle.putParcelable(KEY_ARTICLE, it)
             val action = MostPopularArticleListFragmentDirections.actionArticleListFragmentToArticleDetailFragment()
             findNavController().navigate(
                 action.actionId, bundle
